@@ -1,3 +1,16 @@
+// interfaces
+const me = {
+    name: 'shaun',
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
+console.log(me);
 // classes
 import { Invoice } from './classes/invoice.js';
 const invOne = new Invoice("mario", "work on the mario website", 250);
