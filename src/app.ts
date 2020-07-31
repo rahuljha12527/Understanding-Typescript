@@ -134,9 +134,12 @@ const list=new ListTemplate(ul);
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
 
+  let values:[string,string,number]; 
+  values=[tofrom.value,details.value,amount.valueAsNumber]
+
   let doc:HasFormatter;
   if(type.value==='invoice'){
-    doc=new Invoice(tofrom.value,details.value,amount.valueAsNumber);
+    doc=new Invoice(...values);
 
 
   }
@@ -147,3 +150,22 @@ form.addEventListener("submit", (e: Event) => {
   list.render(doc,type.value,'end');
 //  console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+
+// tuples
+
+let arr=['ryu',25,true];
+arr[0]=false;
+arr[1]='yoshi';
+arr=[30,false,'yoshi raj']
+
+
+let tup:[string,number,boolean]=['hello',40,true];
+
+tup[0]='ken';
+tup[1]=30;
+
+let student:[string,number];
+student=['chun-li',23232]
+
+
+
