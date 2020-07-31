@@ -1,4 +1,22 @@
-// // interfaces
+// Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne = addUID({ name: 'Yoshi', age: 45 });
+//let docTwo=addUID('hello');
+console.log(docOne.name);
+const docThree = {
+    uid: 1,
+    resourceName: 'person',
+    data: { name: 'rahul' }
+};
+const docFour = {
+    uid: 2,
+    resourceName: 'shopping cart',
+    data: ['bread', 'milk', 'toilet roll']
+};
+console.log("ans", docThree, docFour);
 // interface IsPerson{
 //     name:string;
 //     age:number;

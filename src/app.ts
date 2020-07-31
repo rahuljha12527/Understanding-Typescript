@@ -1,5 +1,38 @@
-// // interfaces
+// Generics
+const addUID=<T extends {name:string}>(obj:T)=>{
+  let uid=Math.floor(Math.random()*100);
+  return {...obj,uid};
+}
 
+let docOne=addUID({name:'Yoshi',age:45});
+ //let docTwo=addUID('hello');
+
+console.log(docOne.name);
+
+
+
+
+// // interfaces
+interface Resource<T>{
+  uid:number;
+  resourceName:string;
+  data:T;
+
+}
+
+const docThree: Resource<object>={
+   uid:1,
+   resourceName:'person',
+   data: {name:'rahul'}
+}
+
+ const docFour:Resource<string[]>={
+   uid:2,
+   resourceName:'shopping cart',
+   data:['bread','milk','toilet roll']
+ }
+
+ console.log("ans",docThree,docFour);
 
 
 // interface IsPerson{
