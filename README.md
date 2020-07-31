@@ -16,6 +16,20 @@ Divide code in multiple file.
 <h3>Interfaces</h3>
 learning how to write interface in type script.
 
+<h4>Interface with class</h4>
+
+
+<h4>Rendering an html template</h4>
+
+<h4>Generics</h4>
+
+<h4>Enums</h4>
+
+<h4>Tuples</h4>
+
+
+
+
 
 You see typscript code in src folder.
 
