@@ -6,17 +6,26 @@ const addUID = (obj) => {
 let docOne = addUID({ name: 'Yoshi', age: 45 });
 //let docTwo=addUID('hello');
 console.log(docOne.name);
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
 const docThree = {
     uid: 1,
-    resourceName: 'person',
+    resourceName: ResourceType.AUTHOR,
     data: { name: 'rahul' }
 };
 const docFour = {
     uid: 2,
-    resourceName: 'shopping cart',
+    resourceName: ResourceType.PERSON,
     data: ['bread', 'milk', 'toilet roll']
 };
 console.log("ans", docThree, docFour);
+// Enums
 // interface IsPerson{
 //     name:string;
 //     age:number;

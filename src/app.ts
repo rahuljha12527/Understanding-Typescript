@@ -11,28 +11,34 @@ console.log(docOne.name);
 
 
 
+enum ResourceType {BOOK,AUTHOR,FILM,DIRECTOR,PERSON}
+
 
 // // interfaces
 interface Resource<T>{
   uid:number;
-  resourceName:string;
+  resourceName:ResourceType;
   data:T;
 
 }
 
 const docThree: Resource<object>={
    uid:1,
-   resourceName:'person',
+   resourceName:ResourceType.AUTHOR,
    data: {name:'rahul'}
 }
 
  const docFour:Resource<string[]>={
    uid:2,
-   resourceName:'shopping cart',
+   resourceName:ResourceType.PERSON,
    data:['bread','milk','toilet roll']
  }
 
- console.log("ans",docThree,docFour);
+ console.log("ans",docThree,docFour );
+
+// Enums
+
+
 
 
 // interface IsPerson{
